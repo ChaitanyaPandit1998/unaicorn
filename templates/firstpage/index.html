@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Document</title>
+</head>
+<body>
+
+  <h1>Home Page</h1>
+  <h3>Get Your Titanic Predictions :)</h3>
+  <p>Enter the details please:</p>
+  <form action="{% url 'firstpage:result' %}">
+    {% csrf_token %}
+    <p>Pclass</p>
+    <input type="text" name="pclass">
+    <p>Sex</p>
+    <input type="text" name="sex">
+    <p>Age</p>
+    <input type="text" name="age">
+    <p>Sibsp</p>
+    <input type="text" name="sibsp">
+    <p>Parents/children</p>
+    <input type="text" name="parch">
+    <p>Fare</p>
+    <input type="text" name="fare">
+    <p>Embarked</p>
+    <input type="text" name="embarked">
+    <p>Title</p>
+    <input type="text" name="title">
+    <input type="submit">
+  </form>
+  
+</body>
+</html>
